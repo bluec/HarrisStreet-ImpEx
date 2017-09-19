@@ -73,10 +73,6 @@ class Yaml extends AbstractExporter
      */
     protected function _prepareValue($value)
     {
-        if (is_numeric($value)) {
-            return $value;
-        }
-
         if (strpos($value, "\n") !== FALSE) {
             $values = explode("\n", $value);
             foreach ($values as &$line) {
