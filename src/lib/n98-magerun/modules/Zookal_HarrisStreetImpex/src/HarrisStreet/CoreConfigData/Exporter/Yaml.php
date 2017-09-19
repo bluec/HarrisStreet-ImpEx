@@ -82,6 +82,6 @@ class Yaml extends AbstractExporter
             return "|\n" . $value;
         }
 
-        return '"' . addcslashes($value, '"') . '"';
+        return sprintf("'%s'", str_replace('\'', '\'\'', $value));
     }
 }
